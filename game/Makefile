@@ -1,9 +1,9 @@
 BUILD_DIR=../build/game
 
 GAME_SRCS := $(wildcard *.asm)
-GAME_OBJS := $(patsubst %.asm, $(BUILD_DIR)/%.o, $(OS_SRCS))
+GAME_OBJS := $(patsubst %.asm, $(BUILD_DIR)/%.o, $(GAME_SRCS))
 
-all: $(OS_OBJS)
+all: $(GAME_SRCS)
 
 
 $(BUILD_DIR)/%.o: %.asm
