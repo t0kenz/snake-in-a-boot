@@ -5,6 +5,7 @@ BOOTLOADER_OBJS := $(patsubst %.asm, $(BUILD_DIR)/%.o, $(BOOTLOADER_SRCS))
 
 all: $(BOOTLOADER_OBJS)
 
+clean: $(BUILD_DIR)/*
 
 # "$@ is a special variable that that refers to the output of the recipe: %.o"
 # "$< is a special variable that refers to the input of the recipe: %.asm"
